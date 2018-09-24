@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .strike{
+            text-decoration: line-through;
+            text-decoration-color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <button v-on:click = "titleUpperCase">change title</button>
+        <input v-model = "newTask">
+        <button @click = "addTask">Add</button>
+        <ul>
+            <li v-for = "task in taskList">
+                <!-- <span v-if = "task.done" style="text-decoration : line-through">{{task.name}}</span>
+                <span v-else >{{task.name}}</span> -->
+                <span :class = "{strike : task.done}">{{task.name}}</span>
+                <input type="checkbox" v-model = "task.done">
+            </li>
+            
+        </ul>
+    </div>      
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
