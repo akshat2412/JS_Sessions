@@ -1,0 +1,29 @@
+span.strike{
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.white{
+    color: white;
+}
+
+.mt50{
+    margin-top: 50px;
+}
+
+.bg-red{
+    background-color: red;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-blue{
+    background-color: blue;
+}
+.mr10{
+    margin-right: 10px;
+}
+
+.noborder{
+    border: none;
+}
