@@ -2,9 +2,12 @@
   <div id="app">
     <div id="nav">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <div class="nav-item">
           <router-link to="/">Home</router-link>
-        </li>
+        </div>
+        <div class="nav-item">
+          <router-link to="/about">About</router-link>
+        </div>
       </ul>
     </div>
     <div class="container">
