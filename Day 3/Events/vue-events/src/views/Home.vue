@@ -1,7 +1,18 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <EventCard msg = "akshat"/>
+    <div class="container is-fluid">
+      <div class="columns is-variable is-8">
+        <div class="column">
+          <EventCard :EventId="3"/>
+        </div>
+        <div class="column">
+          <EventCard :EventId="1"/>
+        </div>
+        <div class="column">
+          <EventCard :EventId="2"/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

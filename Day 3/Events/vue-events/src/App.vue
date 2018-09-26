@@ -26,4 +26,8 @@
     }
   }
 }
+
+.selected {
+  color: red;
+}
 </style>
