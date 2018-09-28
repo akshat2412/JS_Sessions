@@ -7,3 +7,17 @@ function Special(constructor) {
     };
 }
 exports.Special = Special;
+function Component(ctor) {
+    return class extends ctor {
+        constructor() {
+            super();
+            this.data = {
+                x: this.x
+            };
+            this.methods = {
+                hello: this.hello
+            };
+        }
+    };
+}
+exports.Component = Component;
