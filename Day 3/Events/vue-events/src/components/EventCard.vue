@@ -1,6 +1,6 @@
 <template>
   <div class="card" v-on:updatePreference="setPreference">
-    <router-link :to = "'/about/' + card.eventID" :preference = "this.card.preference">
+    <router-link :to = "'/detail/' + card.eventID" :preference = "this.card.preference">
       <div class="card-header">
         <p class="card-header-title is-centered">
           Event-Category
@@ -42,16 +42,27 @@ export default {
       console.log('setpreference running')
       this.value = !this.value
     },
-    getClass(choice){
-        return [
-            'card-footer-item',
-            {
-               'selected': this.card.preference[choice]
-            }
-        ]
+    getClass (choice) {
+      return [
+        'card-footer-item',
+        {
+          'selected': this.card.preference[choice]
+        }
+      ]
     },
-    toggleChoice(choice){
-      this.card.preference[choice] = !this.card.preference[choice]
+    toggleChoice (choice) {
+      let arr = ['Going', 'NotGoing', 'Interested']
+      if (this.card.preference[choice] === false) {
+        arr.forEach(element => {
+          if (element !== choice) {
+            this.card.preference[element] = false
+          }
+        })
+        this.card.preference[choice] = true
+      }
+      else {
+        this.card.preference[choice] = false
+      }
     }
   }
 }
