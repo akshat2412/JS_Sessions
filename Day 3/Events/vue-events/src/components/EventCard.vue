@@ -1,6 +1,6 @@
 <template>
   <div class="card" v-on:updatePreference="setPreference">
-    <router-link :to = "'/about/' + this.EventId">
+    <router-link :to = "'/about/' + card.eventID" :preference = "this.card.preference">
       <div class="card-header">
         <p class="card-header-title is-centered">
           Event-Category
@@ -17,21 +17,17 @@
       </div>
       <div class="card-content">
         <div class="content">
-          <p class="title is-4 is-centered">Event Name</p>
-          <p class="subtitle is-6">Location</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris.
-          </p>
+          <p class="title is-4 is-centered">{{card.eventName}}</p>
+          <p class="subtitle is-6">{{card.location}}</p>
           <br>
-          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          <time datetime="2016-1-1">11:09 PM - 1 Jan 2019</time>
         </div>
       </div>
     </router-link>
     <footer class="card-footer">
-      <a href="#" :class = "{selected : Interested}" >Interested</a>
-      <a href="#" :class = "{selected : Going}">Going</a>
-      <a href="#" :class = "{selected : NotGoing}">Not Going</a>
+      <a :class = "getClass('Interested')" @click="toggleChoice('Interested')">Interested</a>
+      <a :class = "getClass('Going')" @click="toggleChoice('Going')">Going</a>
+      <a :class = "getClass('NotGoing')" @click="toggleChoice('NotGoing')">Not Going</a>
     </footer>
   </div>
 </template>
@@ -39,22 +35,23 @@
 <script>
 export default {
   name: 'EventCard',
-  data: function () {
-    return {
-      Going: false,
-      Interested: false,
-      NotGoing: false
-    }
-  },
-  props: {
-    Name: String,
-    EventId: Number
-  },
+  props: ['card'],
   methods: {
     // Triggered when `childToParent` event is emitted by the child.
     setPreference (value) {
       console.log('setpreference running')
       this.value = !this.value
+    },
+    getClass(choice){
+        return [
+            'card-footer-item',
+            {
+               'selected': this.card.preference[choice]
+            }
+        ]
+    },
+    toggleChoice(choice){
+      this.card.preference[choice] = !this.card.preference[choice]
     }
   }
 }
