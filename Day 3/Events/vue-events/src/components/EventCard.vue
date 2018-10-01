@@ -1,6 +1,6 @@
 <template>
-  <div class="card" v-on:updatePreference="setPreference">
-    <router-link :to = "'/detail/' + card.eventID" :preference = "this.card.preference">
+  <div class="card">
+    <router-link :to = "'/detail/' + card.eventID">
       <div class="card-header">
         <p class="card-header-title is-centered">
           Event-Category
