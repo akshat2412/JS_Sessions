@@ -1,0 +1,17 @@
+nav {
+    height: 85px;
+    padding: 20px 120px;
+}
+
+td.label{
+    text-align: left;
+}
+td {
+    display: table-cell;
+    padding: 0 0 0 24px;
+    text-align: left;
+    color: white;
+}
+a{
+    color: white;
+}
