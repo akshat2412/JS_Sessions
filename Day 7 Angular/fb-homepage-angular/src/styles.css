@@ -2,6 +2,24 @@
 
 body {
     margin-bottom: 60px; /* Margin bottom by footer height */
+    margin-top: 85px; /* Margin top by header height */
     font-size: 12px;
   }
+
+
+.bg-fb-blue{
+  background-color: #3B5998;
+}
+
+.bg-fb-grey{
+  background-color: lightgray;
+}
+
+.flt-rt{
+  float: right;
+}
+
+.pt30{
+  padding-top: 30px;
+}
   

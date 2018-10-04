@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class FbInputBoxComponent {
   @Input() type: string;
-  @Input() placeholder: string;
+  @Input() placeholder: string = "";
 
 }
