@@ -1,3 +1,3 @@
-.bg-fb-grey{
-    height: 100vh;
+.bg-fb-grad{
+    background-image: linear-gradient(white, #d9ddeb);
 }

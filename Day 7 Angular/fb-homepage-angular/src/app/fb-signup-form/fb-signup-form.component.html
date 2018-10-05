@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-md-6">
-    <app-fb-input-box placeholder="First Name"></app-fb-input-box>
+    <app-fb-input-box placeholder="First Name" width = 172></app-fb-input-box>
   </div>
   <div class="col-md-6">
     <app-fb-input-box placeholder="Surname"></app-fb-input-box>
@@ -9,7 +9,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <app-fb-input-box placeholder="Mobile number or email address"></app-fb-input-box>
+    <app-fb-input-box placeholder="Mobile number or email address" width = ""></app-fb-input-box>
   </div>
 </div>
 <div class="row">
@@ -17,8 +17,18 @@
     <app-fb-input-box placeholder="New Password"></app-fb-input-box>
   </div>
 </div>
+
 <div class="row">
   <div class="col-md-12">
-    <app-fb-button text = "Sign Up" color = "green"></app-fb-button>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label mr30" for="exampleRadios1">
+          <h6>Male</h6>
+        </label>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          <h6>Female</h6>
+        </label>
+      </div>
   </div>
 </div>

@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./fb-input-box.component.css']
 })
 export class FbInputBoxComponent {
-  @Input() type: string;
-  @Input() placeholder: string = "";
-
+  @Input() type = 'text';
+  @Input() placeholder = '';
+  @Input() width = 172;
+  @Input() height = '30px';
+  @Input() size = 'large';
 }

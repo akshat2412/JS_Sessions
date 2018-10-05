@@ -12,6 +12,7 @@ td {
     text-align: left;
     color: white;
 }
-a{
+a, 
+h1 {
     color: white;
 }

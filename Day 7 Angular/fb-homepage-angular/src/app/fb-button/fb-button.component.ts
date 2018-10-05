@@ -8,4 +8,5 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FbButtonComponent {
 @Input() text: string;
 @Input() color: string;
+@Input() small: false;
 }

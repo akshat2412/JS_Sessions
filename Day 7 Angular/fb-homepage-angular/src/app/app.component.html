@@ -1,18 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-fb-header></app-fb-header>
-<div class="bg-fb-grey">
-  <div class="container">
+<div class="bg-fb-grad">
+  <div class="container pb30">
     <div class="row pt30">
       <div class="col-md-7">
-        <div class="container">
-          <h4>Facebook helps you connect and share with the people in your life.</h4>
-          <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/y6ipRAvRA5w.png" alt="" width="537" height="195">
+        <div class="row">
+          <div class="col-md-10">
+            <h4>Facebook helps you connect and share with the people in your life.</h4>
+            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/y6ipRAvRA5w.png" alt="" width="537" height="195">
+          </div>
         </div>
       </div>
       <div class="col-md-5">
         <h1>Create an account</h1>
         <h5>Its free and always will be</h5>
         <app-fb-signup-form></app-fb-signup-form>
+        <div class="row">
+          <div class="col-md-9">
+            <p>
+                By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <app-fb-button text = "Sign Up" color = "green"></app-fb-button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

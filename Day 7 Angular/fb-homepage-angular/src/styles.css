@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
+    margin-bottom: 20px; /* Margin bottom by footer height */
     margin-top: 85px; /* Margin top by header height */
     font-size: 12px;
   }
@@ -9,6 +9,10 @@ body {
 
 .bg-fb-blue{
   background-color: #3B5998;
+}
+
+.fb-blue{
+  color: #3B5998;
 }
 
 .bg-fb-grey{
@@ -21,5 +25,17 @@ body {
 
 .pt30{
   padding-top: 30px;
+}
+
+.pb30{
+  padding-bottom: 30px;
+}
+
+.mr30{
+  margin-right: 30px;
+}
+
+.mb30{
+  margin-bottom: 30px;
 }
   
