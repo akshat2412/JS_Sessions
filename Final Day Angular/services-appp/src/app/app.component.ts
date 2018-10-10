@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   constructor(private getData: RequestService) {}
 
   ngOnInit() {
-    this.getData.makeRequest();
+    this.getData.makeRequest()
+      .subscribe((data) => console.log(data));
   }
 }

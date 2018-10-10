@@ -4,10 +4,10 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class RequestService {
-
+  url = 'https://jsonplaceholder.typicode.com/todos/1';
   constructor(private http: HttpClient) { }
 
   makeRequest() {
-    console.log(this.http);
+    return this.http.get(this.url);
   }
 }
